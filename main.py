@@ -7,7 +7,7 @@ try:
         res = requests.get(url)
         text = res.json()
         base = text['base']
-        rates = text['rates'][f'{symbol}']
+        rates = text['rates'][symbol]
         print(f"Base: {base}'1'\nRate: {symbol}'{rates}'")
         usr_inp = input('Again(y/n?)').lower()
         if usr_inp == 'n':
